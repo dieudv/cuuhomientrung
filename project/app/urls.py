@@ -17,9 +17,13 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 from rest_framework import routers
 from django_restful_admin import admin as rest_admin
+from . import views
 
 urlpatterns = [
-    path('', admin.site.urls),
-    path('api/', rest_admin.site.urls),  
+    path('import_table/', views.import_table),
+    path('confirm_import_table/<slug:uploaded_file_name>/',
+         views.confirm_import_table),
+    path('api/', rest_admin.site.urls),
     path('chaining/', include('smart_selects.urls')),
+    path('', admin.site.urls),
 ]

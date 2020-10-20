@@ -144,3 +144,7 @@ MEDIA_URL = '/media/'
 CELERY_BROKER_URL = 'redis://localhost:6379'
 # If time zones are active (USE_TZ = True) define your local
 CELERY_TIMEZONE = 'Asia/Ho_Chi_Minh'
+
+
+# Uploaded files
+UPLOADS_ROOT = os.path.join(BASE_DIR, 'uploads')
