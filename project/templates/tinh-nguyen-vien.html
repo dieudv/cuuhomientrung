@@ -1,0 +1,31 @@
+{% load static %}
+{% load bootstrap4 %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DANH SÁCH TÌNH NGUYỆN VIÊN | CỨU TRỢ MIỀN TRUNG</title>
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery=True %}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.22/datatables.min.css"/>
+ 
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jq-3.3.1/dt-1.10.22/datatables.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script type="text/javascript" src="{% static 'js/tnv.js' %}" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card border-primary mb-3">
+            <div class="card-header">
+                <h1>DANH SÁCH TÌNH NGUYỆN VIÊN</h1>
+            </div>
+            <div class="card-body text-dark">
+                <table class="table table-bordered" width="100%" id="tbl-tnv">
+                </table>
+            </div>
+        </div>
+    </div>
+</body>

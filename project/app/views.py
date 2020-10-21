@@ -52,3 +52,7 @@ class HoDanRestFulModelAdmin(BaseRestfulAdmin):
 
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
+
+
+def tnv_list(request):
+    return render(request, "tinh-nguyen-vien.html")
